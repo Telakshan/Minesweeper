@@ -1,4 +1,3 @@
-//const { application } = require("express");
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -16,7 +15,6 @@ let shuffle = gameArray.sort(() => Math.random() - 0.5);
     newGame();
 
 
-    //document.querySelector(".annoying-pop-up").style.display = "block'
     function createBoard(){
         
     
@@ -267,30 +265,11 @@ function newGame(){
         down[e.keyCode] = false;
     })
 
-    // var anotherDown = {}
-    // $(document).keydown(function(e){
-    //     anotherDown[e.keyCode] = true;
-    // }).keyup(function(e){
-    //     if(anotherDown[69] && anotherDown[88]){
-    //         $.ajax({
-    //             url: "/save",
-    //             type: 'POST',
-    //             contentType: 'application/json',
-    //             data: JSON.stringify(saveGame()),
-    //             success: function(response){
-    //                 console.log(response);
-    //             }
-    //         })
-    //     }
-    // })
-
-
-
-
+   
 
 document.getElementById('save').onclick = function(){
     if(!gameEnd){
-        sendExpress();
+        save();
     }else{
         document.getElementById("status").innerHTML = "Cannot save if the game is over!";
         document.querySelector(".pop-up").style.display = "block";
@@ -300,7 +279,7 @@ document.getElementById('save').onclick = function(){
 
 
 
-function sendExpress(){
+function save(){
 
 
 $.ajax({

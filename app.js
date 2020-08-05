@@ -26,6 +26,7 @@ app.use(bodyParser.json());
 app.post('/game', (req, res) => {
     
     const body = JSON.stringify(req.body);
+    console.log(req.body);
 
     const game = new Game({
         gameJSON: body
