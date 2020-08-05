@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
-    
+    "start": "node app"
   },
   "author": "",
   "license": "ISC",
@@ -13,10 +12,8 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-   
     "express": "^4.17.1",
     "mongodb": "^3.5.9",
     "mongoose": "^5.9.26"
-    
   }
 }
