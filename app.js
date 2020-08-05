@@ -7,10 +7,8 @@ const Game = require('./src/models/game');
 require('./src/db/mongoose');
 
 
-const PORT = process.env.PORT || 5000;
- app.listen(PORT, () => {
-     console.log(`Server started on port ${PORT}`);
- })
+const port = process.env.PORT || 5000;
+ 
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -18,7 +16,7 @@ app.use(bodyParser.json());
 
 
 
-// //set static folder
+ //set static folder
  app.use(express.static(path.join(__dirname, 'public')));
 
  app.use(express.json());
@@ -75,7 +73,9 @@ app.post('/login', (req, res) => {
     })
 })
 
-
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
+})
 
 
 
