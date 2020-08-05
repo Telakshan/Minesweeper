@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+    </head>
+
+    <body>
+        <div id="nav-placeholder">
+
+        </div>
+        
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("navigation.html");
+        });
+        </script>
+
+    </body>
+
+    <body>
+        <div id="cc">
+            <h1 id="contact-us">
+                CONTACT US
+            </h1>
+            <p id="para">Leave us a message</p>
+
+        </div>
+        
+            
+
+                <form id="contact" action="contactform.php" method="post">
+                    <label for="f-name" name="f-name">First name</label>
+                    <input type="text" id="f-name" name="firstname" placeholder="Enter your first name here">
+
+                    <label for="l-name" name="l-name">Last name</label>
+                    <input type="text" id="l-name" name="lastname" placeholder="Enter your last name here">
+
+                    <label for="email" name="email">e-mail</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email here">
+                    
+                    <label for="country" name="country">Country</label>
+                <select placeholder="Select country">
+
+                      <option value="Select Country">Select Country</option>
+                      <option value="Canada">Canada</option>    
+                      <option value="Mexico">Mexico</option>
+                      <option value="United States">United States</option>
+                      <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                      <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                
+                </select>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+                    <input type="submit" name="submit" value="Submit">
+
+
+                </form>
+            
+        
+        
+    </body>
+    
+
+
+</html>

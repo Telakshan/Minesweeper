@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    
+
+    <form id="register" action="home.html">
+        
+        <h1 style="text-align: center;">Register</h1>
+        <label name="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username here">
+
+        <label name="email">e-mail</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email here">
+        <label for="psw">Password</label>
+        <input type="password" id="password" name="password">
+
+        <button name="sub" type="submit" id= "submit" style="width: 100%;">Register</button>
+
+
+    </form>
+
+    <script>
+
+            document.getElementById('submit').addEventListener('click',() => {
+
+                let data = {
+                    username: $('#username').val(),
+                    email: $('#email').val(),
+                    password: $('#password').val()
+
+                }
+
+                console.log(data);
+                $.ajax({
+
+                    url: '/register',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: (response) => {
+                        console.log(response);
+                    }
+                })
+
+                alert('Successfully registered, you will be redirected to the homepage');
+            });
+
+
+
+    </script>
+
+    
+
+    
+    </html>
+

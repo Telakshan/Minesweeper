@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    
+
+    <form action="home.html">
+        
+        <h1 style="text-align: center;">Log in</h1>
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter your username here">
+
+        <label for="psw">Password</label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit" id="login" onclick="redirect()" style="width: 100%;">Log in</button>
+
+
+    </form>
+
+    <div class="pop-up">
+        <h1 id="status">Successfully logged in</h1>
+    </div>
+
+    <script>
+
+        document.getElementById('login').addEventListener('click', ()=>{
+
+            let data = {
+            username: $('#username').val(),
+            password: $('#password').val()
+        }
+
+       
+
+        $.ajax({
+            url: '/login',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(data),
+            success: (response) => {
+                console.log(response);
+                
+            }
+        });
+
+        alert('Successfully logged in!');
+
+        
+        
+
+        })
+
+       
+
+        
+
+
+
+    </script>
+    
+
+    
+    </html>

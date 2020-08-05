@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>355 Term Project Homepage</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <div id="nav-placeholder">
+
+        </div>
+        
+        <script>
+        $(function(){
+          $("#nav-placeholder").load("navigation.html");
+        });
+        </script>
+    </body>
+
+    <div class="game-rules">
+        <h2>Rules</h2>
+        <p>
+            <ul class="list-of-rules">
+                <br><li>You are presented with a board. Some boxes contains mines, some contain numbers and some are empty boxes</li><br>
+               
+                <img id="mine" src='Images/mine.PNG'/>
+
+                <li>When you click a box which doesn't have a mine, a number will appear revealing the amount of mines in the neighboring adjacent boxes. In the figure above for example, there are 4 mines around the box that was clicked. </li>
+                
+
+                <li>This game does require some guesswork initially, but as you play you will get information of where the mines are located</li>
+
+                <img id="flag-pic" src="Images/flag.png"/>
+
+                <li>When you logically deduce the location of a mine, place a flag in the box by right clicking.</li>
+
+                <img id="flag-pic" src="Images/bomb.png"/>
+
+                <li>You lose the game when you click a box that contains a mine.</li>
+                
+                <li>To win, Accurately place the flags in the boxes that contains the mines.</li>
+
+                <li>Keep in mind, this game is very challenging. So, be very thoughtful when clicking a box.</li>
+                
+                <li>We hope you enjoy the game and become the ultimate Minesweeper!</li>
+            </ul>
+        </p>
+
+    </div>
+
+    
+
+        
+
+
+
+</html>
