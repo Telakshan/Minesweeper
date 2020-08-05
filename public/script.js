@@ -249,23 +249,6 @@ function newGame(){
 
        }
 
-    var down = {};
-    $(document).keydown(function(e) {
-        down[e.keyCode] = true;
-    }).keyup(function(e) {
-        if (down[67] && down[72] && down[84]) {
-            board.forEach(box =>{
-                if(box.classList.contains('mine')){
-
-                    box.style.backgroundColor = "#be3144";
-
-                }
-            })
-        }
-        down[e.keyCode] = false;
-    })
-
-   
 
 document.getElementById('save').onclick = function(){
     if(!gameEnd){
