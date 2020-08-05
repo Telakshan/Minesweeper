@@ -6,15 +6,10 @@ const User = require('./src/models/user');
 const Game = require('./src/models/game');
 require('./src/db/mongoose');
 
-
 const port = process.env.PORT || 5000;
  
-
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
-
 
  //set static folder
  app.use(express.static(path.join(__dirname, 'public')));
