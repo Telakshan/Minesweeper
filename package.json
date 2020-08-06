@@ -2,9 +2,9 @@
   "name": "practice",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "",
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
