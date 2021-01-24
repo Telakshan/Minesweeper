@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const db = 'mongodb+srv://dante:inferno@minesweeper.aclmb.mongodb.net/Game?retryWrites=true&w=majority';
+const db = 'mongodb--URI--placeholder';
 
 mongoose.connect(db, {
     useNewUrlParser: true,
